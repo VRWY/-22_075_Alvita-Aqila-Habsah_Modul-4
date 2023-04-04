@@ -1,0 +1,265 @@
+*{
+    margin:0 ;
+    padding : 0;
+}
+/* overflow : kode ini untuk menampilkan scroll jika "hidden" diganti "scroll". */
+.topnav {
+    overflow: hidden;
+    background-color: #e89aaa;
+}
+
+.topnav a {
+    color: rgb(225, 248, 255);
+    display: inline-block;
+    text-align: center;
+    padding: 0px 20px 45px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    color: rgb(123, 45, 142);
+}
+
+/* Sembunyikan hamburger yang seharusnya membuka dan menutup topnav di layar kecil */
+.topnav .icon {
+    display: none;
+    padding: 0px 40px 30px 30px;
+    font-size: 30px;
+}
+
+.logo{
+    padding: 30px 30px 35px 30px;
+    font-size: 47px;
+    color: #ffe787;
+    text-shadow:
+    2px 2px 0 #56535397,
+    3px 3px 0 #a2acaf;
+}
+
+/* responsive */
+/* Saat lebar layar kurang dari 700 piksel, sembunyikan semua tautan, kecuali yang pertama ("Beranda"). Tampilkan tautan yang berisi harus membuka dan menutup topnav (.icon) */
+/* menghapus semua elemen / link dalam navbar kecuali "first child" atau elemen pertama. */
+@media screen and (max-width: 700px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* Kelas "responsif" ditambahkan ke topnav dengan JavaScript saat pengguna mengklik ikon. Kelas ini membuat topnav terlihat bagus di layar kecil (menampilkan tautan secara vertikal, bukan horizontal) */
+@media screen and (max-width: 700px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.container{
+    text-align: left;
+    margin: 0px 90px 60px 50px;
+    padding: 100px 0px 0px 30px;
+}
+
+span{
+    color: #b198f1;
+}
+
+.banner h1{
+    font-size: 50px;
+    color: #d88e60;
+}
+
+.banner p{
+    font-size: 17px ;
+    color: #686646;
+    
+}
+
+.gambar-logo img {
+    float: right;
+    width: 320px ;
+    height: 310px;
+    margin: 0px 90px;
+    padding: 60px 0px 90px 90px;
+}
+
+.btn-daftar{
+    margin: 20px 40px;
+    padding: 0px 0px 100px 40px;
+}
+
+.btn{
+    padding : 12px 24px;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px ;
+}
+
+.twitter{
+    background-color: #607873;
+    color: #ffffff;
+}
+
+.instagram{
+    background-color: #cdd2de;
+    color: white;
+    margin-right: 6px;
+}
+
+.gambar-tangan img{
+    float: left;
+    width: 350px ;
+    height: 300px;
+    margin: 7px 0px 30px;
+    padding: 40px 10px 0px 60px;
+    
+}
+
+.desc{
+    text-align: right;
+    margin: 20px 50px 60px 50px;
+    padding: 40px 0 70px 0;
+}
+
+.desc h1{
+    color: #98c2f1;
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+}
+
+.desc p{
+    color: #d8c460;
+    font-size: 20px;
+    text-align: right justify;
+}
+
+.gambar img{
+    margin: 7px 0px 30px;
+    width: 250px ;
+    height: 220px;
+    padding: 15px;
+}
+
+.form{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form p{
+    padding: 8px;
+    color: #475576;
+}
+.form button{
+    margin-top: 5px;
+    width: 60px;
+    height: 32px;
+    background-color: #cfb1c9;
+}
+
+input{
+    width: 20%;
+    padding: 8px 12px;
+    margin: 8px;
+    border: 2px solid rgb(177, 134, 134);
+}
+
+.footer-list{
+    padding: 40px 0;
+    margin-top: 50px;
+    background-color:#706666;
+    color:#ffffff;
+}
+
+.footer-list ul {
+    padding:0;
+    list-style:none;
+    text-align: center;
+    font-size:18px;
+    margin-bottom:0;
+}
+
+.footer-list li {
+    padding:0 10px;
+    display: inline;
+}
+
+.footer-list ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity:0.8;
+}
+
+.footer-list ul a:hover {
+    opacity:1;
+}
+
+.footer-list .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-list .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+
+.footer-list .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-list .copyright {
+    margin-top: 15px;
+    text-align:center;
+    font-size: 13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.to-top {
+    background:#cfb1c9;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#6d6363;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+    }
